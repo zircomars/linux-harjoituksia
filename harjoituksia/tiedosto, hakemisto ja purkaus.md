@@ -24,6 +24,28 @@
 └─$ echo "sisältöä dataa" > data1/data1.txt
 ```
 
+# tiedoston kopiointi
+ensimmäisenä mitä halutaan kopioida ja nimettynä
+```
+┌──(kali㉿kali)-[~/Desktop/oikeus-harj]
+└─$ cp tiedosto1.txt tiedosto4.txt
+                                                                                                            
+┌──(kali㉿kali)-[~/Desktop/oikeus-harj]
+└─$ ls
+tiedosto1.txt  tiedosto2.txt  tiedosto3.txt  tiedosto4.txt
+```
+
+# tiedoston poistaminen
+poistettaan kyseinen tiedosto ja tarkistuksena on poistettu kansion alta ja listattuna
+```
+┌──(kali㉿kali)-[~/Desktop/oikeus-harj]
+└─$ rm tiedosto4.txt 
+                                                                                                            
+┌──(kali㉿kali)-[~/Desktop/oikeus-harj]
+└─$ ls
+tiedosto1.txt  tiedosto2.txt  tiedosto3.txt
+```
+
 ## zippataan ja kuin pakkataan tiedosto kansio 1 yhteen pakettiin    
 ```
 ┌──(kali㉿kali)-[~/Desktop/harjoitus]
