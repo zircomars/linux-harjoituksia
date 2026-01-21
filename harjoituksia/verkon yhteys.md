@@ -2,15 +2,19 @@
 Verkon yhteys koskien on mm. DNS / yhteys ja ARP - usein esim. päästäkseen kohteen nettisivustolle
 
 # IP-osoitteet
-Tarkistuksena tarkistaa oman IP-osoitteen mikä on oma yhteys
+Tarkistuksena tarkistaa oman IP-osoitteen mikä on oma yhteys & tällä on kaksi vaihtoehtoa joko ensimmäinen tai toinen - molemmat ovat yhtä hyviä
 ```
 ┌──(kali㉿kali)-[~]
 └─$ ip a
 1: lo: 
 2: eth0:
+
+┌──(kali㉿kali)-[~]
+└─$ ifconfig                        
+eth0:
 ```
 
-# muita IP vaihtoehtoisia termistöjä
+## muita IP vaihtoehtoisia termistöjä
 ```
 ┌──(kali㉿kali)-[~]
 └─$ ip  
@@ -38,6 +42,33 @@ sama idea kuin tarkistaisi oman IP-osoitteen yhteyden, että tarkistuksena tarki
 └─$ ip r
 default via
 ```
+
+## tarkistus langaton wifi informatio
+```
+┌──(kali㉿kali)-[~]
+└─$ iwconfig
+lo        no wireless extensions.
+
+eth0      no wireless extensions.
+```
+
+## tarkista verkkojen yhteys
+```
+┌──(kali㉿kali)-[~]
+└─$ netstat
+Active Internet connections (w/o servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State      
+```
+
+## tarkista reitti
+esim. tarkistuksena koskien oma IP-osoitteen alue ja mikä maski, että default gateway portti osoite 
+```
+┌──(kali㉿kali)-[~]
+└─$ route 
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+```
+
 
 # Portit ja kuuntelevat palvelut
 ```
